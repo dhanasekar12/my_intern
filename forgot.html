@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./validation/css/validationEngine.jquery.css">
+</head>
+<body>
+    <div class="p-3 mb-2 text-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 offset-md-4 mt-lg-5">
+                    <div class="card">
+                        <div class="card-body">                          
+                            <form id="myform">
+                               
+                                <h1 class="text-center h3 mb-3 fw-normal">Find Your email</h1>
+                                <p class="text-center pb-2 mx-3">Enter your phone number or recovery email</p>
+                                <div class="mb-3">
+                                    <label for="">Email</label>
+                                    <input type="email" name="mail" id="mail" class="form-control validate[required,custom[email]]" placeholder="Enter email">
+                                 </div>
+                                <div>
+                                <button type="button" class="me-4 float-end btn btn-primary">Next</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./validation/js/languages/jquery.validationEngine-en.js"></script>
+    <script src="./validation/js/jquery.validationEngine.js"></script>
+    <script>
+       $("#myform").validationEngine();
+    </script>
+</body>
+</html>

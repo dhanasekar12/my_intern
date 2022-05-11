@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reg</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./validation/css/validationEngine.jquery.css">
+</head>
+<body>
+    <div class="container bg-light">
+        <div class="row">
+           <div class="col-lg-4 offset-md-4 mt-lg-5">
+              <div class="card">
+                 <div class="card-header text-center bg-warning">REGISTRATION FORM</div>
+                    <div class="card-body bg-info">
+                       <form id="myform">
+                          <div class="mb-3">
+                             <label for="">Firstname</label>
+                             <input type="text" class="validate[required]" id="Firstname" name="Firstname">
+                          </div>
+                          <div class="mb-3">
+                             <label for="">Lastname</label>
+                             <input type="text" id="name" name="lastname" class="validate[required]">
+                          </div>
+                          <div class="mb-3">
+                             <label for="">Email Id</label>
+                             <input type="email" name="mail" id="mail" class="form-control validate[required,custom[email]]" placeholder="Enter email">
+                          </div>
+                          <div class="mb-3">
+                             <label for="">Status</label>
+                             <select class="form-select validate[required]" id="state">
+                             <option selected>select status</option>
+                             <option value="1">Active</option>
+                             <option value="2">Inactive</option>
+                             </select>
+                          </div>
+                          <div class="d-grid gap-2 col-6 mb-3 mx-auto">
+                             <button class="btn btn-primary">Submit</button>
+                          </div>
+                       </form>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <script src="./js/jquery-3.6.0.min.js"></script>
+     <script src="./validation/js/languages/jquery.validationEngine-en.js"></script>
+     <script src="./validation/js/jquery.validationEngine.min.js"></script>
+     <script>
+        $("#myform").validationEngine();
+     </script>
+</body>
+</html>

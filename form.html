@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./validation/css/validationEngine.jquery.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row"> 
+            <div class="col-lg-4 offset-md-4 mt-lg-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="myform">
+                            <div class="pb-3">
+                                <input type="text" id="name" name="name" class="form-control validate[required]" placeholder="Enter username">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" name="pwd" id="pwd" class="form-control validate[required,maxSize[16],minSize[8]]" placeholder="Enter password">
+                            </div>
+                            <div class="pb-3">
+                                <button class="btn btn-primary w-100">Log In</button>
+                            </div>
+                            <div class="text-center">
+                                <a href="forgot.html" class="text-decoration-none">Forgotten password?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./validation/js/languages/jquery.validationEngine-en.js"></script>
+    <script src="./validation/js/jquery.validationEngine.js"></script>
+    <script>
+       $("#myform").validationEngine();
+    </script> 
+</body>
+</html>

@@ -17,6 +17,10 @@ array_push($result, $obj);
 foreach($result as $v)
 {
     echo $v->name."<br>";
+    echo $v->email."<br>";
+    echo $v->number."<br>";
+    echo $v->state."<br>";
+    echo $v->country."<br>";
 }
 
 }
